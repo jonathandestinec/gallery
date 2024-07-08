@@ -1,29 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #020b11;
+  @apply text-white;
+  /* overflow: hidden; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
+
+.cover-bg {
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease-in-out 0.5s;
+  z-index: -10;
+}
+
+.bg1 {
+  opacity: 1;
+  background-image: radial-gradient(circle, transparent 35%, rgba(5, 12, 20, 1) 100%), url("/cover-photo.jpg");
+}
+
+.bg2 {
+  opacity: 0;
+  background-image: radial-gradient(circle, transparent 35%, rgba(5, 12, 20, 0.95) 100%), url("/cover-photo2.jpg");
+}
+
+.bg3 {
+  opacity: 0;
+  background-image: radial-gradient(circle, transparent 35%, rgba(5, 12, 20, 0.95) 100%), url("/cover.jpg");
+}
+
+.bg4 {
+  opacity: 0;
+  background-image: radial-gradient(circle, transparent 35%, rgba(5, 12, 20, 0.95) 100%), url("/cover-photo3.jpg");
+}
+
+.visible-cover {
+  opacity: 1;
+}
+
+header {
+  backdrop-filter: brightness(80%);
+}
+
+nav {
+  background: linear-gradient(to bottom, rgba(5, 12, 20, 0.7), transparent);
+}
+
+.mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s step-end;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s step-start;
+}
+
+footer {
+  background-image: radial-gradient(circle, transparent 35%, rgba(5, 12, 20, 1) 100%), url("/cover-photo2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section {
+  margin-top: 0;
 }
 
 @layer utilities {
