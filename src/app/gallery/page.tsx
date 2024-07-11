@@ -15,12 +15,14 @@ function page() {
       <div className=' flex items-center justify-between mt-3'>
 
         <a href="/">
-          <i className="fi fi-ss-island-tropical ml-10 mr-16 text-3xl opacity-90"></i>
+          <i className="fi fi-ss-island-tropical md:ml-16 ml-10 md:text-3xl text-2xl opacity-90"></i>
         </a>
 
         <h1 className={`text-center ${nunito_sans.className} text-4xl underline-offset-4 mt-5 font-bold basis-auto`}>Gallery</h1>
 
-        <i className="fi fi-rr-arrow-small-right text-3xl flex items-center justify-center mr-16"></i>
+        <a href="/">
+          <i className="fi fi-rr-arrow-small-right md:text-3xl text-2xl flex items-center justify-center md:mr-16 mr-10"></i>
+        </a>
 
       </div>
 
