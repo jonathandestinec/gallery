@@ -5,6 +5,8 @@ import { Nunito_Sans, Cairo, Lora, Open_Sans, Platypi, GFS_Didot } from 'next/fo
 import Nav from '@/components/Nav'
 
 import { photos } from '@/utils/data'
+const display_photos = photos.slice(0, 2) 
+
 import { journal } from '@/utils/data'
 
 const displayJournals = [journal[0], journal[1]]
@@ -169,10 +171,10 @@ function page() {
 
         <div className=' md:flex items-center justify-center gap-10 block md:mt-10 mt-14 w-4/5 ml-auto mr-auto'>
 
-          {photos.map(photo => {
+          {display_photos.map(photo => {
             return (
               <motion.div
-                className=' md:w-3/12 w-full ml-auto mr-auto md:m-0 mb-10 h-80 overflow-hidden bg-black'
+                className=' md:w-1/4 w-full ml-auto mr-auto md:m-0 mb-10 h-80 overflow-hidden bg-black'
                 initial={{ opacity: 0, translateY: "30px" }}
                 whileInView={{ opacity: 1, translateY: "0px" }}
                 transition={{ delay: 1, duration: 1, type: "spring", ease: "easeIn" }}
@@ -228,7 +230,7 @@ function page() {
                 className=' md:w-3/6 w-full ml-auto mr-auto md:m-0 mb-10 overflow-hidden'
                 initial={{ opacity: 0, translateY: "30px" }}
                 whileInView={{ opacity: 1, translateY: "0px" }}
-                transition={{ delay: 1, duration: 1, type: "spring", ease: "easeIn" }}
+                transition={{ delay: 0.8, duration: 1, type: "spring", ease: "easeIn" }}
                 key={journal.id}
               >
 
