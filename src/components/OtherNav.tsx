@@ -4,7 +4,7 @@ import { Nunito_Sans, GFS_Didot } from 'next/font/google'
 
 const nunito_sans = Nunito_Sans({ weight: ["200", "400", "500", "600"], subsets: ["latin"] })
 const gfs_didot = GFS_Didot({ weight: "400", subsets: ["greek"] })
-function OtherNav(props: { page: string, title: string }) {
+function OtherNav(props: { page: string}) {
     return (
         <div className=' flex items-center justify-between md:mt-3 mt-8'>
 

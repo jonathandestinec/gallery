@@ -58,7 +58,7 @@ function page({ params }: { params: { id: string } }) {
     return (
         <div className=' w-full ml-auto mr-auto'>
 
-            <OtherNav page='Photo' title={`${photo.title}`} />
+            <OtherNav page='Photo' />
 
             <div className='md:w-1/2 w-10/12 ml-auto mr-auto md:mt-10 mt-24 ring-1 ring-gray-500 rounded-2xl md:p-8 p-5 box-border bg-opacity-10 bg-black backdrop-blur-xl'>
 
