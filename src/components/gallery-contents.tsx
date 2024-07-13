@@ -16,7 +16,7 @@ function GalleryContents() {
                 <div key={photo.id} className=' md:w-1/5 w-full mb-10 ml-auto mr-auto md:m-0 rounded-xl p-5 ring-1 ring-gray-500 bg-opacity-80 gallery-photo overflow-hidden'>
 
                     <a href={`/gallery/photo/${photo.id}`}>
-                        <img src={`${photo.image}`} className=' w-full h-[18rem] rounded-xl' alt="" />
+                        <img src={`${photo.images[0]}`} className=' w-full h-[18rem] rounded-xl' alt="" />
                     </a>
 
                     <div className=' pr-5 pl-5 mt-5 box-border flex items-center justify-start gap-3'>

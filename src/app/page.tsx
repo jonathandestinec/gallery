@@ -11,6 +11,7 @@ import { journal } from '@/utils/data'
 
 const displayJournals = [journal[0], journal[1]]
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const nunito_sans = Nunito_Sans({ weight: ["200", "400", "500", "600"], subsets: ["latin"] })
 const cairo = Cairo({ weight: ["200", "300", "400", "500", "600", "700"], subsets: ["latin"] })
@@ -69,9 +70,9 @@ function page() {
           <i className="fi fi-rr-cross text-black text-2xl cursor-pointer" onClick={handleToggleMenu}></i>
         </div>
 
-        <img src="/veggie.png" alt="" className=' w-44 absolute bottom-0 mb-10 transform -translate-x-16 left-0 blur-sm' />
+        <Image width={200} height={200} src="/veggie.png" alt="" className=' w-44 absolute bottom-0 mb-10 transform -translate-x-16 left-0 blur-sm'/>
 
-        <img src="/veggie2.png" alt="" className=' w-52 absolute bottom-0 mb-48 transform translate-x-16 right-0 blur-md' />
+        <Image width={200} height={200} src="/veggie2.png" alt="" className=' w-52 absolute bottom-0 mb-48 transform translate-x-16 right-0 blur-md' />
 
         <div className=' w-4/5 pt-3 pb-3 ml-auto mr-auto text-center flex items-center justify-center'>
           <a href="/about" className={`${nunito_sans.className} ${currentPath === "/about" ? "font-bold" : "font-normal"} text-lg text-black hover:bg-white hover:bg-opacity-25 w-full pt-3 pb-3`}>ABOUT</a>
@@ -177,10 +178,10 @@ function page() {
                 className=' md:w-1/4 w-full ml-auto mr-auto md:m-0 mb-10 h-80 overflow-hidden bg-black'
                 initial={{ opacity: 0, translateY: "30px" }}
                 whileInView={{ opacity: 1, translateY: "0px" }}
-                transition={{ delay: 1, duration: 1, type: "spring", ease: "easeIn" }}
+                transition={{ delay: 1, duration: 2, type: "spring", ease: "easeIn" }}
                 key={photo.id}
               >
-                <img src={photo.image} alt="" className=' absolute -z-10 w-full h-full filter brightness-100 hover:brightness-110 transition-all ease-in' />
+                <Image width={200} height={200} src={photo.images[0]} alt="" className=' absolute -z-10 w-full h-full filter brightness-100 hover:brightness-110 transition-all ease-in' />
 
                 <div className='absolute bottom-0 mb-6 transform left-1/2 -translate-x-1/2 z-10'>
                   <p className={`${gfs_didot.className} text-2xl text-center font-medium`}>{photo.title}</p>
@@ -236,7 +237,7 @@ function page() {
 
                 <div className=' w-full h-60 overflow-hidden'>
 
-                  <img src={`${journal.image}`} alt="" className=' absolute w-full h-60 filter brightness-110' />
+                  <Image width={200} height={200} src={`${journal.images[0]}`} alt="" className=' absolute w-full h-60 filter brightness-110' />
 
                   {/* View btn */}
 

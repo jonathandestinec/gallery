@@ -7,25 +7,13 @@ const open_sans = Open_Sans({ weight: ["400", "500", "600", "700"], subsets: ["l
 const gfs_didot = GFS_Didot({ weight: "400", subsets: ["greek"] })
 
 import GalleryContents from '@/components/gallery-contents'
+import OtherNav from '@/components/OtherNav'
 
 function page() {
   return (
     <div className=' gallery'>
 
-      <div className=' flex items-center justify-between mt-3'>
-
-        <a href="/">
-          <i className="fi fi-ss-island-tropical md:ml-16 ml-10 md:text-3xl text-2xl opacity-90"></i>
-        </a>
-
-        <h1 className={`text-center ${nunito_sans.className} text-4xl underline-offset-4 mt-5 font-bold basis-auto`}>Gallery</h1>
-
-        <a href="/">
-          <i className="fi fi-rr-arrow-small-right md:text-3xl text-2xl flex items-center justify-center md:mr-16 mr-10"></i>
-        </a>
-
-      </div>
-
+      <OtherNav page='Gallery'/>
 
       <GalleryContents />
 
