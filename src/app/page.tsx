@@ -70,9 +70,9 @@ function page() {
           <i className="fi fi-rr-cross text-black text-2xl cursor-pointer" onClick={handleToggleMenu}></i>
         </div>
 
-        <Image width={200} height={200} src="/veggie.png" alt="" className=' w-44 absolute bottom-0 mb-10 transform -translate-x-16 left-0 blur-sm'/>
+        <Image width={200} height={200} src="/veggie.png" alt="" className=' w-44 absolute bottom-0 mb-10 transform -translate-x-16 left-0 blur-sm' priority/>
 
-        <Image width={200} height={200} src="/veggie2.png" alt="" className=' w-52 absolute bottom-0 mb-48 transform translate-x-16 right-0 blur-md' />
+        <Image width={200} height={200} src="/veggie2.png" alt="" className=' w-52 absolute bottom-0 mb-48 transform translate-x-16 right-0 blur-md' priority />
 
         <div className=' w-4/5 pt-3 pb-3 ml-auto mr-auto text-center flex items-center justify-center'>
           <a href="/about" className={`${nunito_sans.className} ${currentPath === "/about" ? "font-bold" : "font-normal"} text-lg text-black hover:bg-white hover:bg-opacity-25 w-full pt-3 pb-3`}>ABOUT</a>
@@ -181,7 +181,7 @@ function page() {
                 transition={{ delay: 1, duration: 2, type: "spring", ease: "easeIn" }}
                 key={photo.id}
               >
-                <Image width={200} height={200} src={photo.images[0]} alt="" className=' absolute -z-10 w-full h-full filter brightness-100 hover:brightness-110 transition-all ease-in' />
+                <Image width={200} height={200} src={photo.images[0]} alt="" className=' absolute -z-10 w-full h-full filter brightness-100 hover:brightness-110 transition-all ease-in' priority />
 
                 <div className='absolute bottom-0 mb-6 transform left-1/2 -translate-x-1/2 z-10'>
                   <p className={`${gfs_didot.className} text-2xl text-center font-medium`}>{photo.title}</p>
@@ -192,7 +192,7 @@ function page() {
 
                 <div className=' w-full ml-auto mr-auto h-full flex items-center justify-center absolute z-10 opacity-0 hover:opacity-100 hover:backdrop-brightness-75 transition-all ease-in-out'>
 
-                  <a href={`/gallery/${photo.id}`} className={`w-1/2 pt-2 pb-2 bg-white text-black text-sm text-center ${nunito_sans.className}`}>View</a>
+                  <a href={`/gallery/photo/${photo.id}`} className={`w-1/2 pt-2 pb-2 bg-white text-black text-sm text-center ${nunito_sans.className}`}>View</a>
                 </div>
 
               </motion.div>
@@ -237,7 +237,7 @@ function page() {
 
                 <div className=' w-full h-60 overflow-hidden'>
 
-                  <Image width={200} height={200} src={`${journal.images[0]}`} alt="" className=' absolute w-full h-60 filter brightness-110' />
+                  <Image width={200} height={200} src={`${journal.images[0]}`} alt="" className=' absolute w-full h-60 filter brightness-110' priority />
 
                   {/* View btn */}
 

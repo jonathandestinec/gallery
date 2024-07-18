@@ -66,7 +66,7 @@ function page({ params }: { params: { id: string } }) {
                     {
                         images?.map(image => (
                             <div key={image}>
-                                <Image width={200} height={200} src={`${image}`} alt='' className=' w-full h-full absolute rounded-3xl photo_img' />
+                                <Image width={200} height={200} src={`${image}`} alt='' className=' w-full h-full absolute rounded-3xl photo_img' priority />
                             </div>
                         ))
                     }
@@ -124,7 +124,7 @@ function page({ params }: { params: { id: string } }) {
 
             {
                 images?.map(image => (
-                    <Image width={200} height={200} src={`${image}`} alt='' className=' w-full h-screen rounded-3xl photo-bg-image fixed -z-10 top-0 left-0 blur-sm brightness-[40%]' key={image} />
+                    <Image width={200} height={200} src={`${image}`} alt='' className=' w-full h-screen rounded-3xl photo-bg-image fixed -z-10 top-0 left-0 blur-sm brightness-[40%]' key={image} priority />
                 ))
             }
         </div>
