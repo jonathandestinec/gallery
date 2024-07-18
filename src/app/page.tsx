@@ -7,9 +7,9 @@ import Nav from '@/components/Nav'
 import { photos } from '@/utils/data'
 const display_photos = photos.slice(0, 2) 
 
-import { journal } from '@/utils/data'
+import { journals } from '@/utils/data'
 
-const displayJournals = [journal[0], journal[1]]
+const displayJournals = [journals[0], journals[1]]
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -87,7 +87,7 @@ function page() {
         </div>
 
         <div className=' w-4/5 pt-3 pb-3 ml-auto mr-auto text-center flex items-center justify-center'>
-          <a href="/journal" className={`${nunito_sans.className} ${currentPath === "/journal" ? "font-bold" : "font-normal"} text-lg text-black hover:bg-white hover:bg-opacity-25 w-full pt-3 pb-3`}>JOURNAL</a>
+          <a href="/journals" className={`${nunito_sans.className} ${currentPath === "/journals" ? "font-bold" : "font-normal"} text-lg text-black hover:bg-white hover:bg-opacity-25 w-full pt-3 pb-3`}>JOURNAL</a>
         </div>
 
       </div>
@@ -243,7 +243,7 @@ function page() {
 
                   <div className=' w-full ml-auto mr-auto h-60 flex items-center justify-center absolute z-10 opacity-0 hover:opacity-100 hover:backdrop-brightness-75 transition-all ease-in-out'>
 
-                    <a href={`/journal/${journal.id}`} className={`w-1/2 pt-2 pb-2 bg-white text-black text-sm text-center ${nunito_sans.className}`}>View</a>
+                    <a href={`/journals/journal/${journal.id}`} className={`w-1/2 pt-2 pb-2 bg-white text-black text-sm text-center ${nunito_sans.className}`}>View</a>
                   </div>
                 </div>
 
@@ -278,7 +278,7 @@ function page() {
 
         </div>
 
-        <a href="/gallery" className=' flex items-center justify-center gap-2 pt-5 text-orange-300'>
+        <a href="/journals" className=' flex items-center justify-center gap-2 pt-5 text-orange-300'>
           All Posts <i className="fi fi-rr-arrow-small-right flex items-center justify-center"></i>
         </a>
 
@@ -299,7 +299,7 @@ function page() {
 
               | <a href="/gallery" className={`${nunito_sans.className} ${currentPath === "/explore" ? "font-bold" : "font-normal"} text-xs`}>GALLERY</a>
 
-              | <a href="/journal" className={`${nunito_sans.className} ${currentPath === "/journal" ? "font-bold" : "font-normal"} text-xs`}>JOURNAL</a>
+              | <a href="/journals" className={`${nunito_sans.className} ${currentPath === "/journals" ? "font-bold" : "font-normal"} text-xs`}>JOURNAL</a>
 
               | <a href="/search" className={`${nunito_sans.className} ${currentPath === "/search" ? "font-bold" : "font-normal"} text-xs`}>SEARCH</a>
             </div>

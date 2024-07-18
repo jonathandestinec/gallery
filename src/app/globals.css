@@ -154,6 +154,11 @@ footer {
   transition: all 1s ease-in-out;
 }
 
+.tags-container {
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
 /* 
 .gallery::after {
   content: "";
