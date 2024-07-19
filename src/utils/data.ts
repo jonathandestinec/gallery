@@ -9,7 +9,7 @@ export const photos = [
 
     { id: 5, title: "Beachh2", subtitle: "Another wonderful Beach", views: 23, uploadedAt: "7/5/2024", time: "12:33", images: ["/blog-img3.jpg"], tags: ["Outside", "Beach"] },
 
-    { id: 5, title: "Beachh2", subtitle: "Another wonderful Beach", views: 23, uploadedAt: "7/5/2024", time: "12:33", images: ["/blog-img3.jpg"], tags: ["Outside", "Beach"] },
+    { id: 5, title: "Beachh3", subtitle: "Another wonderful Beach", views: 23, uploadedAt: "7/5/2024", time: "12:33", images: ["/blog-img3.jpg"], tags: ["Outside", "Beach"] },
 ]
 
 export const journals = [
@@ -44,4 +44,12 @@ export const journals = [
          
         `, views: 23, uploadedAt: "7/5/2024", time: "12:33", images: ["/travelling.jpg", "/blog-img2.jpg"], tags: ["Nature", "Outside"]
     },
+]
+
+export const tags = [
+    "Nature",
+    "Outside",
+    "Sky",
+    "Clouds",
+    "Beach"
 ]
